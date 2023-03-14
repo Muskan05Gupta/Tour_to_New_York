@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="width=device-width, initial-scale=1">
+<style>
+body{
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+* {box-sizing: border-box;}
+.line {
+  color: darkblue;
+  font-size: 50px; 
+}
+.line1 {
+  color: darkblue;
+  font-size: 30px;
+}
+.line2 {
+  color: darkblue;
+  font-size: 20px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: darkblue;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: darkblue;
+    background-color: white;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div id="logo">
+    <img src="https://www.shutterstock.com/image-vector/aircraft-airplane-airline-logo-label-260nw-1144866683.jpg" alt="Tour Avengers">
+  </div>
+  <ul>
+    <li class="item"><a href="#home">Home</a></li>
+    <li class="item"><a href="#tripstaken">Trips taken</a></li>
+    <li class="item"><a href="#createtrip">Create a trip</a></li>
+    <li class="item"><a href="#contactinfo">Contact Us</a></li>
+  </ul>
+</nav>
+
+
+<section id = "home">
+  
+<hr color = blue>
+<hr color = darkblue>
+<hr color = blue>
+  <p class = "line">Home</p>
+</section>
+
+<section id = "tripstaken">
+  <hr color = blue>
+<hr color = darkblue>
+<hr color = blue>
+<p class = "line">Trips Taken</p>
+<p class = "line1">Hey! You have not taken any trip yet.</p>
+<p class = "line1">Create your first trip to enjoy it with us!</p>
+</section>
+
+<section id = "createtrip">
+  <hr color = blue>
+  <hr color = darkblue>
+  <hr color = blue>
+<p class = "line">Create a trip</p>
+<p class = "line1">Choose a destination of your choice:</p>
+
+<div class="row">
+  <div class="column">
+    <img src="https://static.scientificamerican.com/sciam/cache/file/B4E01593-54DD-451B-B4E06A5EB669451A_source.jpg" alt="Snow" style="width:100%">
+    <p1 class = "line1">Glaciers</p1>
+  </div>
+  <div class="column">
+    <img src="https://ggsc.s3.amazonaws.com/images/uploads/Forest_in_Japan.jpg" alt="Forest" style="width:100%">
+    <p1 class = "line1">Forests</p1>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg" alt="Mountains" style="width:100%">
+    <p1 class = "line1">Mountains</p1>
+  </div>
+  <div class="column">
+    <img src="https://img.freepik.com/free-photo/tropical-beach_74190-188.jpg" alt="Beaches" style="width:100%">
+    <p1 class = "line1">Beaches</p1>
+  </div>
+ </div>
+
+<div class = "line2">
+E-mail: <input type="email" id="myEmail" placeholder="abc@pqr.xyz">
+<button onclick="myFunction1()">Add the users</button><br><br>
+
+No. of members: <input type="number" id="members" placeholder="0">
+<button onclick="myFunction2()">Add the members</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3">Total number of members added are : </p>
+<p id="demo4"></p>
+</div>
+
+<script>
+
+var temp1 = "";
+function myFunction1() {
+  var x = document.getElementById("myEmail").value;
+  if(temp1 == ""){
+  temp1 = x;}
+  else{
+  temp1 = temp1 + ", " + x;}
+  document.getElementById("demo1").innerHTML = temp1;
+}
+
+var temp = 0;
+var temp2 = 0;
+function myFunction2() {
+  var y = Number(document.getElementById("members").value);
+  if (temp == 0){
+  temp = y;}else{
+  temp = temp + "+" + y;}
+  temp2 = temp2 + y;
+  document.getElementById("demo2").innerHTML = temp;
+  document.getElementById("demo4").innerHTML = temp2;
+}
+
+</script>
+
+</section>
+
+<section id = "contactinfo">
+  <hr color = blue>
+<hr color = darkblue>
+<hr color = blue>
+  <p class = "line">Contact Us</p>
+  <p class = "line1">For any query reach to us through:</p>
+  <p class = "line2">email: avengers@tour_manager.ac.in</p>
+  <p class = "line2">Phone number: 8287332752, 9212050049</p>
+  <p class = "line2">Office Address: 283, Pocket-5, Sector-22, Rohini, Delhi-110086</p>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+</body>
+</html>

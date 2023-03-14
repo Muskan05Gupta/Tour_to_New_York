@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="width=device-width, initial-scale=1">
+<style>
+body{
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+* {box-sizing: border-box;}
+.line {
+  color: darkblue;
+  font-size: 50px; 
+}
+.line1 {
+  color: darkblue;
+  font-size: 30px;
+}
+.line2 {
+  color: darkblue;
+  font-size: 20px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: darkblue;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: darkblue;
+    background-color: white;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.card {
+  box-shadow: 0 4px 8px 0 grey;
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 grey;
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div id="logo">
+    <img src="https://www.shutterstock.com/image-vector/aircraft-airplane-airline-logo-label-260nw-1144866683.jpg" alt="Tour Avengers">
+  </div>
+  <ul>
+    <li class="item"><a href="#home">Home</a></li>
+    <li class="item"><a href="#tripstaken">Trips taken</a></li>
+    <li class="item"><a href="#createtrip">Create a trip</a></li>
+    <li class="item"><a href="#contactinfo">Contact Us</a></li>
+  </ul>
+</nav>
+
+
+<section id = "home">
+  
+<hr color = blue>
+<hr color = darkblue>
+<hr color = blue>
+  <p class = "line">Home</p>
+  <p class = "line1">We aim at providing an easy way to book your travel. Everything here can be managed beforehand, so no worries during the trip.</p>
+  <p class = "line1">Explore our website "TOUR TO NEW YORK" and book your travel at the ease of your home to enjoy it with us.</p>
+  <p class = "line1">You will be able choose your destination and make a group trip. Duties can be assigned to the fellow members of the team. The day-wise schedule can be choosen easily. </p>
+  <p class = "line1">Feel free to contact us or reach out to us at our address for your queries.</p>
+</section>
+
+
+<section id = "tripstaken">
+  <hr color = blue>
+<hr color = darkblue>
+<hr color = blue>
+<p class = "line">Trips Taken</p>
+<div class="card">
+  <div class="container">
+    <h4><b>Manali, Himachal Pradesh</b></h4> 
+    <p>4 days</p> 
+    <p>4 members</p> 
+  </div>
+</div><br>
+<div class="card">
+  <div class="container">
+    <h4><b>Port Blair</b></h4> 
+    <p>5 days</p> 
+    <p>12 members</p> 
+  </div>
+</div><br>
+<div class="card">
+  <div class="container">
+    <h4><b>Kashmir</b></h4> 
+    <p>7 days</p> 
+    <p>8 members</p> 
+  </div>
+</div><br>
+<div class="card">
+  <div class="container">
+    <h4><b>Goa</b></h4> 
+    <p>5 days</p> 
+    <p>4 members</p> 
+  </div>
+</div><br>
+</section>
+
+<section id = "createtrip">
+  <hr color = blue>
+  <hr color = darkblue>
+  <hr color = blue>
+<p class = "line">Create a trip</p>
+<p class = "line1">Choose a destination of your choice:</p>
+
+<div class="row">
+  <div class="column">
+    <img src="https://static.scientificamerican.com/sciam/cache/file/B4E01593-54DD-451B-B4E06A5EB669451A_source.jpg" alt="Snow" style="width:100%">
+    <p1 class = "line1">Glaciers</p1>
+  </div>
+  <div class="column">
+    <img src="https://ggsc.s3.amazonaws.com/images/uploads/Forest_in_Japan.jpg" alt="Forest" style="width:100%">
+    <p1 class = "line1">Forests</p1>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg" alt="Mountains" style="width:100%">
+    <p1 class = "line1">Mountains</p1>
+  </div>
+  <div class="column">
+    <img src="https://img.freepik.com/free-photo/tropical-beach_74190-188.jpg" alt="Beaches" style="width:100%">
+    <p1 class = "line1">Beaches</p1>
+  </div>
+ </div>
+ <p class = "line1">Choose your destination:</p>
+
+<form class = "line2">
+  <p>Like glaciers? Choose from these:</p>
+  <input type="radio" name="destination">
+  <label for="Rohtang Pass(Himachal Pradesh)">Rohtang Pass(Himachal Pradesh)</label>
+  <input type="radio" name="destination">
+  <label for="Solang Pass(Himachal Pradesh)">Solang Pass(Himachal Pradesh)</label>
+  <input type="radio" name="destination">
+  <label for="Gangotri Glacier(Uttarakhand)">Gangotri Glacier(Uttarakhand)</label>
+  <input type="radio" name="destination">
+  <label for="Nathula Pass(Sikkim)">Nathula Pass(Sikkim)</label>
+ 
+  <p>Like forests? Choose from these:</p>
+  <input type="radio" name="destination">
+  <label for="Jim Corbett National Park(Uttarakhand)">Jim Corbett National Park(Uttarakhand)</label>
+  <input type="radio" name="destination">
+  <label for="Gir National Park(Gujarat)">Gir National Park(Gujarat)</label>
+  <input type="radio" name="destination">
+  <label for="Sundarbans(West Bengal)">Sundarbans(West Bengal)</label>
+  <input type="radio" name="destination">
+  <label for="Kaziranga National Park(Assam)">Kaziranga National Park(Assam)</label>
+  
+  <p>Like mountains? Choose from these:</p>
+  <input type="radio" name="destination">
+  <label for="Shimla(Himachal Pradesh)">Shimla(Himachal Pradesh)</label>
+  <input type="radio" name="destination">
+  <label for="Darjeeling(Sikkim)">Darjeeling(Sikkim)</label>
+  <input type="radio" name="destination">
+  <label for="Kashmir">Kashmir</label>
+  <input type="radio" name="destination">
+  <label for="Manali(Himachal Pradesh)">Manali(Himachal Pradesh)</label>
+  
+  <p>Like beaches? Choose from these:</p>
+  <input type="radio" name="destination">
+  <label for="Goa">Goa</label>
+  <input type="radio" name="destination">
+  <label for="Mumbai(Maharashtra)">Mumbai(Maharashtra)</label>
+  <input type="radio" name="destination">
+  <label for="Port Blair(Andaman and Nicobar Islands)">Port Blair(Andaman and Nicobar Islands)</label>
+  <input type="radio" name="destination">
+  <label for="Varkala Beach(Kerala)">Varkala Beach(Kerala)</label><br><br>
+  
+  <input type="button" value="Choose destination" onclick="Func()"><br>
+</form><br><br>
+
+<p class = "line1">Wanted to go somewhere else? No worries! Just provide us with the name and a display picture.</p>
+
+<div class = "line2">
+E-mail: <input type="email" id="myEmail" placeholder="abc@pqr.xyz">
+<button onclick="myFunction1()">Add the users</button><br><br>
+
+Number of members: <input type="number" id="members" placeholder="0">
+<button onclick="myFunction2()">Add the members</button><br><br>
+
+Choose start date of trip: <input type="date" id="startdate">
+<button onclick="myFunction3()">Choose start date</button><br><br>
+
+Choose end date of trip: <input type="date" id="enddate">
+<button onclick="myFunction4()">Choose end date</button>
+
+<p id="demo0"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3">Total number of members added are : </p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+</div>
+
+<script>
+
+var temp1 = "";
+function myFunction1() {
+  var x = document.getElementById("myEmail").value;
+  if(temp1 == ""){
+  temp1 = x;}
+  else{
+  temp1 = temp1 + ", " + x;}
+  document.getElementById("demo1").innerHTML = temp1;
+}
+
+var temp = 0;
+var temp2 = 0;
+function myFunction2() {
+  var y = Number(document.getElementById("members").value);
+  if (temp == 0){
+  temp = y;}else{
+  temp = temp + "+" + y;}
+  temp2 = temp2 + y;
+  document.getElementById("demo2").innerHTML = temp;
+  document.getElementById("demo4").innerHTML = temp2;
+}
+var z;
+function myFunction3() {
+  z = document.getElementById("startdate").value;
+  document.getElementById("demo5").innerHTML = "The start date of trip is : " + z;
+}
+var d;
+function myFunction4() {
+  d = document.getElementById("enddate").value;
+  document.getElementById("demo6").innerHTML = "The end date of trip is : " + d;
+  var diff = Math.abs(new Date(d) - new Date(z));
+  document.getElementById("demo7").innerHTML = "Total number days of trip are : " + (diff/(3600000*24) + 1);
+}
+
+
+
+function Func() {
+  document.getElementById("demo0").innerHTML = "Your destination is successfully choosen!";
+}
+
+</script>
+
+</section>
+
+<section id = "contactinfo">
+  <hr color = blue>
+<hr color = darkblue>
+<hr color = blue>
+  <p class = "line">Contact Us</p>
+  <p class = "line1">For any query reach to us through:</p>
+  <p class = "line2">email: avengers@tour_manager.ac.in</p>
+  <p class = "line2">Phone number: 8287332752, 9212050049</p>
+  <p class = "line2">Office Address: 283, Pocket-5, Sector-22, Rohini, Delhi-110086</p>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+</body>
+</html>
