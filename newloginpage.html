@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,9 +83,121 @@ body{
   clear: both;
   display: table;
 }
+.card {
+  box-shadow: 0 4px 8px 0 grey;
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 grey;
+}
+
+.container {
+  padding: 2px 16px;
+}
+.container1 {
+  display: flex;
+  justify-content: center
+}
+
+
+.text {
+  padding-left: 250px;
+  padding-right: 70px;
+}
 </style>
 </head>
 <body>
+  
+<script>
+
+  var temp1 = "";
+  function myFunction1() {
+    var x = document.getElementById("myEmail").value;
+    if(temp1 == ""){
+    temp1 = x;}
+    else{
+    temp1 = temp1 + ", " + x;}
+    document.getElementById("demo1").innerHTML = "Email id of the members attending the trip are : " + temp1;
+  }
+  
+  var temp = 0;
+  var temp2 = 0;
+  var tempaa = 0;
+  function myFunction2() {
+    var y = Number(document.getElementById("members").value);
+    tempaa++;
+    if (temp == 0){
+    temp = y;}else{
+    temp = temp + "+" + y;}
+    temp2 = temp2 + y;
+    document.getElementById("demo3").innerHTML = "Total number of members are : " + temp + " = " + temp2;
+  }
+  var z;
+  function myFunction3() {
+    z = document.getElementById("startdate").value;
+    document.getElementById("demo5").innerHTML = "The start date of trip is : " + z;
+  }
+  var d;
+  var a1;
+  var a2;
+  var mus4;
+  function myFunction4() {
+    d = document.getElementById("enddate").value;
+    document.getElementById("demo6").innerHTML = "The end date of trip is : " + d;
+    a1 = new Date(d);
+    a2 = new Date(z);
+    var diff = Math.abs(a1 - a2);
+    document.getElementById("demo7").innerHTML = "Total number days of trip are : " + (diff/(3600000*24) + 1);
+    mus4 = (diff/(3600000*24) + 1);
+  }
+  
+  function myFunction01() {
+    var tempa = document.getElementById("myDestination").value;
+    document.getElementById("demo0").innerHTML = "Your destination is : " + tempa ;
+  }
+  function Function1() {
+    var num = 1;
+    while(mus4 != 0){
+    var mus1 = document.createElement("TEXTAREA");
+    mus1.setAttribute('name', 'post');
+    mus1.setAttribute('maxlength', 5000);
+    mus1.setAttribute('cols', 50);
+    mus1.setAttribute('rows', 10);
+    var mus2 = document.createTextNode("Day " + num);
+    mus1.appendChild(mus2);
+    document.getElementById("abc").appendChild(mus1);
+    num++;
+    mus4--;
+    }
+  }
+  function Function2() {
+    var numa = 1;
+    while(tempaa != 0){
+    var mus10 = document.createElement("TEXTAREA");
+    mus10.setAttribute('name', 'post');
+    mus10.setAttribute('maxlength', 5000);
+    mus10.setAttribute('cols', 50);
+    mus10.setAttribute('rows', 10);
+    var mus20 = document.createTextNode("Family " + numa);
+    mus10.appendChild(mus20);
+    document.getElementById("abc").appendChild(mus10);
+    numa++;
+    tempaa--;
+    }
+  }
+  function Function0(){
+    var mus0 = document.createElement("TEXTAREA");
+    mus0.setAttribute('name', 'post');
+    mus0.setAttribute('maxlength', 5000);
+    mus0.setAttribute('cols', 130);
+    mus0.setAttribute('rows', 20);
+    var mus200 = document.createTextNode("Food, Medicines, ...");
+    mus0.appendChild(mus200);
+    document.getElementById("abc").appendChild(mus0);
+  }
+  </script>
 
 <nav id="navbar">
   <div id="logo">
@@ -100,12 +213,23 @@ body{
 
 
 <section id = "home">
-  
 <hr color = blue>
 <hr color = darkblue>
 <hr color = blue>
-  <p class = "line">Home</p>
+  <p class = "line">Tour to New York</p>
+  <div class="container1">
+    <div class="image1">
+      <img src="https://www.intermiles.com/_next/image?url=https://www.intermilesresources.com/iwov-resources/images/blog/gain-a-richer-travel-experience-with-making-friends-on-your-trip/travel-Mobile-414x233.jpg&w=640&q=75" height = 110%>
+    </div>
+    <div class="text">
+      <p class = "line1">Key features:</p>
+      <p class = "line1">1. Easy to create a trip.</p>
+      <p class = "line1">2. Well managed trips.</p>
+      <p class = "line1">3. Best packages available.</p>
+    </div>
+  </div><br><br><br><br><br>
 </section>
+
 
 <section id = "tripstaken">
   <hr color = blue>
@@ -113,7 +237,7 @@ body{
 <hr color = blue>
 <p class = "line">Trips Taken</p>
 <p class = "line1">Hey! You have not taken any trip yet.</p>
-<p class = "line1">Create your first trip to enjoy it with us!</p>
+<p class = "line1">Create your first trip to enjoy it with us!</p><br>
 </section>
 
 <section id = "createtrip">
@@ -142,46 +266,40 @@ body{
     <img src="https://img.freepik.com/free-photo/tropical-beach_74190-188.jpg" alt="Beaches" style="width:100%">
     <p1 class = "line1">Beaches</p1>
   </div>
- </div>
+ </div><br>
 
-<div class = "line2">
+
+<div class = "line2" id ="abc">
+
+Name of destination: <input type ="text" id="myDestination" placeholder="Destination">
+<button onclick="myFunction01()">Choose Destination</button><br><br>
+
+Display picture of destination: <input type="file" id="myFile"><br><br>
+
 E-mail: <input type="email" id="myEmail" placeholder="abc@pqr.xyz">
 <button onclick="myFunction1()">Add the users</button><br><br>
 
-No. of members: <input type="number" id="members" placeholder="0">
-<button onclick="myFunction2()">Add the members</button>
+Number of members: <input type="number" id="members" placeholder="0">
+<button onclick="myFunction2()">Add the members</button><br><br>
 
+Choose start date of trip: <input type="date" id="startdate">
+<button onclick="myFunction3()">Choose start date</button><br><br>
+
+Choose end date of trip: <input type="date" id="enddate">
+<button onclick="myFunction4()">Choose end date</button><br>
+
+<p id="demo0"></p>
 <p id="demo1"></p>
-<p id="demo2"></p>
-<p id="demo3">Total number of members added are : </p>
-<p id="demo4"></p>
+<p id="demo3"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+<button onclick="Function1()">Schedule your trip</button><br><br>
+<button onclick="Function0()">Create a list of duties/things</button><br><br>
+<button onclick="Function2()">Allot duties to members</button><br><br>
 </div>
 
-<script>
-
-var temp1 = "";
-function myFunction1() {
-  var x = document.getElementById("myEmail").value;
-  if(temp1 == ""){
-  temp1 = x;}
-  else{
-  temp1 = temp1 + ", " + x;}
-  document.getElementById("demo1").innerHTML = temp1;
-}
-
-var temp = 0;
-var temp2 = 0;
-function myFunction2() {
-  var y = Number(document.getElementById("members").value);
-  if (temp == 0){
-  temp = y;}else{
-  temp = temp + "+" + y;}
-  temp2 = temp2 + y;
-  document.getElementById("demo2").innerHTML = temp;
-  document.getElementById("demo4").innerHTML = temp2;
-}
-
-</script>
 
 </section>
 
